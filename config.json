@@ -1,0 +1,61 @@
+{
+    "api_key": "yCGjiaNhjZa0YPezxP7397zRo25jKAzFctsYvdh1",
+    "persona_name": "Nitesh",
+    "check_interval": 5,
+    "inactivity_timeout": 120,
+    "api_timeout": 10,
+    "whatsapp_coords": [
+        1052,
+        1016
+    ],
+    "chat_area": {
+        "start_x": 460,
+        "start_y": 92,
+        "end_x": 1631,
+        "end_y": 922
+    },
+    "message_box_coords": [
+        718,
+        953
+    ],
+    "debug_mode": true,
+    "cohere_model": "command-a-03-2025",
+    "use_fallback_mode": true,
+    "language_mix": "Hindi-English",
+    "tone": "warm",
+    "max_length": 20,
+    "temperature": 0.8,
+    "force_response": false,
+    "human_mode": true,
+    "click_safe_zone": true,
+    "use_exact_coords": true,
+    "last_processed_message": "",
+    "triple_click_enabled": true,
+    "whatsapp_icon": [
+        958,
+        1010
+    ],
+    "last_message_area": [
+        529,
+        923
+    ],
+    "message_box": [
+        670,
+        956
+    ],
+    "max_runs": 100,
+    "platform": "WhatsApp",
+    "send_button_coords": [
+        1245,
+        362
+    ],
+    "retry_attempts": 3,
+    "delay_between_actions": 0.5,
+    "last_screenshot_hash": 3280345964322310220,
+    "min_scan_wait": 1.0,
+    "key_press_delay": 0.3,
+    "last_reply_time": 0,
+    "min_reply_interval": 3.0,
+    "heartbeat_interval": 15,
+    "max_scan_failures": 3
+}
