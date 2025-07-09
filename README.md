@@ -73,3 +73,8 @@ This project is licensed under the terms of the [MIT License](LICENSE)
 ## 🙏 Acknowledgements
 - **Cohere AI** for their powerful language model.
 - The open-source community for continuous inspiration.
+
+## 📹 Demo Video
+
+Watch the full demo here:
+https://youtu.be/hZiXlHr4EVE?feature=shared
