@@ -6,6 +6,10 @@
 
 A sophisticated WhatsApp auto-reply bot powered by Cohere AI that generates human-like responses to incoming messages. This tool uses screen automation to interact with WhatsApp Desktop, providing a seamless chatting experience even when you're away.
 
+## 🎬 Demo
+
+[Watch the full demo video](https://github.com/user-attachments/assets/be582988-230d-45aa-a1b6-5781a07fc76a)
+
 ## ✨ Features
 
 - **AI-Powered Responses**: Leverages Cohere's language models to generate contextually relevant, human-like replies
@@ -130,18 +134,3 @@ This project is [MIT](LICENSE) licensed.
 
 ---
 *Last updated: 2025-07-09 13:22:35 UTC by @Niteshkrjhag*
-
-## 📹 Demo Video
-
-Watch the full demo here:
-https://github.com/Niteshkrjhag/AutoReplyPro_/issues/1#issue-3245965982
-## 🎬 Demo
-
-<a href="https://github.com/Niteshkrjhag/AutoReplyPro_/issues/1#issue-3245965982" target="_blank">
-  <img src="https://github.com/Niteshkrjhag/AutoReplyPro_/issues/1#issue-3245965982" alt="GRAB App Demo" width="600"/>
-</a>
-![GRAB App Demo](https://github.com/Niteshkrjhag/AutoReplyPro_/issues/1#issue-3245965982)
-
-[Watch the full demo video](https://github.com/Niteshkrjhag/AutoReplyPro_/issues/1#issue-3245965982)
-
-Click the image above to watch the demo video.
