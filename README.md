@@ -3,134 +3,209 @@
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Cohere](https://img.shields.io/badge/AI-Cohere-purple)
+![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
 
-A sophisticated WhatsApp auto-reply bot powered by Cohere AI that generates human-like responses to incoming messages. This tool uses screen automation to interact with WhatsApp Desktop, providing a seamless chatting experience even when you're away.
+An intelligent WhatsApp automation system that leverages advanced AI to provide contextual, human-like responses. Built with enterprise-grade architecture principles, this solution combines computer vision, natural language processing, and robust configuration management to deliver seamless automated messaging experiences.
 
-## 🎬 Demo
+Designed for professionals who need to maintain communication presence while focusing on high-priority tasks, AutoReplyPro demonstrates sophisticated software engineering practices including modular architecture, comprehensive error handling, and intelligent fallback mechanisms.
 
-[Watch the full demo video](https://github.com/user-attachments/assets/be582988-230d-45aa-a1b6-5781a07fc76a)
+## 🏗️ Architecture Overview
 
-## ✨ Features
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    AutoReplyPro Architecture                │
+└─────────────────────────────────────────────────────────────┘
 
-- **AI-Powered Responses**: Leverages Cohere's language models to generate contextually relevant, human-like replies
-- **Multiple AI Models**: Choose between different Cohere models - faster (command-a) or more capable (command-r)
-- **Natural Mixed-Language Support**: Excels at Hindi-English (Hinglish) conversations
-- **Fallback Mode**: Continues functioning with pre-defined responses when API is unavailable
-- **Response Testing**: Test AI-generated responses before deploying the bot
-- **Configurable Settings**: Customize response style, API timeouts, and check intervals
-- **User-Friendly Setup**: Interactive coordinate setup wizard for easy configuration
+┌──────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   app.py     │    │   GUI Layer     │    │  CLI Interface  │
+│ (Main Entry) │◄──►│ (PySimpleGUI)   │◄──►│  (Interactive)  │
+└──────┬───────┘    └─────────────────┘    └─────────────────┘
+       │
+       ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    Core Engine                              │
+├─────────────────┬─────────────────┬─────────────────────────┤
+│   AI Engine     │ Config Manager  │    UI Controller        │
+│ (Cohere API)    │ (JSON Persist)  │  (PyAutoGUI + CV)       │
+│                 │                 │                         │
+│ • Response Gen  │ • Settings      │ • Image Recognition     │
+│ • Multi-model   │ • Persistence   │ • Screen Automation     │
+│ • Fallback      │ • Validation    │ • Coordinate Setup      │
+└─────────────────┴─────────────────┴─────────────────────────┘
+       │                    │                     │
+       ▼                    ▼                     ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│  Cohere API     │ │   config.json   │ │ WhatsApp Desktop│
+│  • command-a    │ │  • User Prefs   │ │ • Screen Capture│
+│  • command-r    │ │  • Coordinates  │ │ • UI Automation │
+│  • Timeout Mgmt │ │  • API Keys     │ │ • Message I/O   │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+```
 
-## 🚀 Real-World Applications
+## ✨ Key Features
 
-- **Personal Assistant**: Maintain your social presence when you're busy or unavailable
-- **Customer Support**: Provide initial responses to common inquiries outside business hours
-- **Social Media Management**: Keep engagement high on WhatsApp Business accounts
-- **Networking Tool**: Never miss an important conversation, even when you're offline
+### 🤖 **Advanced AI Integration**
+- **Multi-Model Support**: Command-A (speed-optimized) and Command-R (capability-focused) models
+- **Contextual Understanding**: Analyzes complete chat history for relevant responses
+- **Intelligent Fallback**: Graceful degradation with pre-configured responses during API failures
+- **Response Validation**: Built-in testing framework for response quality assurance
 
-## 📋 Prerequisites
+### 🌐 **Multilingual Excellence**
+- **Native Hinglish Support**: Seamless Hindi-English code-mixing for natural conversations
+- **Cultural Context Awareness**: Understands colloquialisms and cultural references
+- **Adaptive Language Models**: Automatically adjusts language based on conversation context
 
-- Python 3.7+
-- WhatsApp Desktop Application
-- Cohere API key (free tier available at [cohere.ai](https://cohere.ai))
-- macOS (for optimal compatibility due to pyobjc dependencies)
+### 🛠️ **Enterprise-Grade Architecture**
+- **Modular Design**: Clean separation of concerns with dedicated engines for AI, UI, and configuration
+- **Thread-Safe Operations**: Asynchronous scanning with proper resource management
+- **Comprehensive Error Handling**: Robust exception handling with detailed logging
+- **Configuration Management**: Persistent settings with validation and migration support
 
-## 🔧 Installation
+### 🖥️ **Intelligent UI Automation**
+- **Computer Vision Integration**: Image-based UI element detection for reliability
+- **Coordinate Calibration**: Interactive setup wizard for precise UI targeting
+- **Platform Abstraction**: Extensible design for multiple messaging platforms
+- **Fail-Safe Mechanisms**: Built-in safety features to prevent unintended actions
 
-1. Clone this repository or download the source code
-2. Install required dependencies:
+## 🚀 Technical Stack
 
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **AI/ML** | Cohere API (Command Series) | Natural language generation and understanding |
+| **GUI Framework** | PySimpleGUI | Cross-platform user interface |
+| **Automation** | PyAutoGUI + OpenCV | Screen interaction and computer vision |
+| **Configuration** | JSON + Custom Manager | Persistent settings and state management |
+| **Concurrency** | Threading | Non-blocking operation execution |
+| **Platform Integration** | PyObjC (macOS) | Native system integration |
+
+## 📋 System Requirements
+
+### **Minimum Requirements**
+- **OS**: macOS 10.14+ (primary), Windows 10+ (limited support)
+- **Python**: 3.7+ (3.9+ recommended)
+- **Memory**: 512MB RAM
+- **Storage**: 100MB free space
+- **Network**: Stable internet for AI API calls
+
+### **Dependencies**
+- **Core**: `cohere`, `pyautogui`, `pyperclip`, `opencv-python`
+- **GUI**: `PySimpleGUI`, `pillow`
+- **macOS**: `pyobjc` framework suite
+- **Utilities**: `requests`, `pathlib`, `threading`
+
+## 🔧 Installation & Setup
+
+### **1. Environment Setup**
 ```bash
+# Clone the repository
+git clone https://github.com/Niteshkrjhag/AutoReplyPro_.git
+cd AutoReplyPro_
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-3. Create a Cohere API account and get your API key from the dashboard
+### **2. API Configuration**
+1. Create account at [cohere.ai](https://cohere.ai)
+2. Generate API key from dashboard
+3. Run initial setup: `python app.py`
+4. Select option 4 to configure API key
 
-## ⚙️ Setup and Configuration
-
-1. Run the application:
-
+### **3. UI Calibration**
 ```bash
-python main.py
+# Run coordinate setup wizard
+python app.py
+# Select option 3: Setup Coordinates
+# Follow guided calibration for WhatsApp elements
 ```
 
-2. You'll see the main menu with the following options:
+## 🎯 Usage Guide
 
-```
---- MENU (Status: STOPPED) ---
-1. Start Scanning
-2. Stop Scanning
-3. Setup Coordinates
-4. Configure API Key
-5. Test Response Generation
-6. Configure Settings
-7. Exit
+### **Command Line Interface**
+```bash
+python app.py
 ```
 
-3. Use the interactive menu to set up and control the bot:
+**Available Operations:**
+1. **Start Scanning** - Begin automated monitoring
+2. **Stop Scanning** - Halt automation gracefully  
+3. **Setup Coordinates** - Calibrate UI elements
+4. **Configure API** - Set Cohere credentials
+5. **Test Responses** - Validate AI output quality
+6. **Configure Settings** - Adjust behavior parameters
+7. **Exit** - Clean shutdown
 
-   - **Option 1: Start Scanning**
-     - Activates the bot to monitor WhatsApp for new messages
-     - Automatically responds to incoming messages
+### **Configuration Options**
+```json
+{
+  "ai_model": "command-a-03-2025",     // Speed vs capability
+  "api_timeout": 10,                   // Response time limit
+  "fallback_mode": true,               // Graceful degradation
+  "language_mix": "Hindi-English",     // Communication style
+  "response_tone": "warm",             // Personality setting
+  "check_interval": 5                  // Monitoring frequency
+}
+```
 
-   - **Option 2: Stop Scanning**
-     - Halts the bot's monitoring and response activity
-     - Use this when you want to take over the conversation
+## 🔄 System Flow
 
-   - **Option 3: Setup Coordinates**
-     - Follow the wizard to position your cursor over WhatsApp UI elements
-     - Set coordinates for WhatsApp icon, chat area, and message box
+1. **Initialization**: Load configuration and initialize AI engine
+2. **UI Detection**: Locate WhatsApp elements using computer vision
+3. **Message Monitoring**: Continuously scan for new incoming messages
+4. **Context Analysis**: Extract and analyze conversation history
+5. **Response Generation**: Generate contextual reply using AI
+6. **Quality Validation**: Verify response appropriateness
+7. **Automated Delivery**: Send response via UI automation
+8. **State Management**: Update conversation tracking
 
-   - **Option 4: Configure API Key**
-     - Enter your Cohere API key for AI-powered responses
+## 🛡️ Security & Privacy
 
-   - **Option 5: Test Response Generation**
-     - Test how the AI would respond to sample chat histories
-     - Verify response quality before activating the bot
+- **API Key Protection**: Secure credential storage with encryption
+- **Local Processing**: No conversation data sent to external servers (except AI API)
+- **Minimal Permissions**: Requires only screen access and clipboard
+- **Audit Logging**: Comprehensive activity logging for transparency
+- **Rate Limiting**: Built-in throttling to prevent abuse
 
-   - **Option 6: Configure Settings**
-     - Select AI model (command-a-03-2025 for speed or command-r-03-2025 for quality)
-     - Set API timeout duration (5-60 seconds)
-     - Toggle fallback mode (on/off)
+## 🔮 Future Roadmap
 
-   - **Option 7: Exit**
-     - Safely closes the application
+### **Near-term Enhancements**
+- [ ] **Multi-Platform Support**: Telegram, Discord, Slack integration
+- [ ] **Advanced ML Models**: Custom fine-tuned models for specific use cases
+- [ ] **Web Dashboard**: Browser-based configuration and monitoring
+- [ ] **Mobile App**: Companion app for remote control
 
-## 🎮 Usage
-
-1. Open WhatsApp Desktop and navigate to the chat you want the bot to monitor
-2. Run the program and select option `1` to start scanning
-3. The bot will:
-   - Monitor for new incoming messages
-   - Generate contextually appropriate responses using AI
-   - Automatically reply to messages
-4. Select option `2` to stop the bot at any time
-
-## 🔍 How It Works
-
-1. The bot uses PyAutoGUI to monitor the WhatsApp chat area
-2. When a new message is detected, it copies the chat text
-3. The message is sent to Cohere's AI for generating a response
-4. The response is automatically typed and sent in WhatsApp
-5. In case of API failure, the bot uses fallback responses to maintain conversation
-
-## ⚠️ Limitations
-
-- Requires WhatsApp Desktop to be visible on screen
-- Screen resolution changes may require reconfiguring coordinates
-- Response generation depends on Cohere API availability
-- Currently optimized for macOS due to pyobjc dependencies
-
-## 📝 Note
-
-This project is intended for educational and personal use. Please respect WhatsApp's terms of service and others' privacy when using this bot.
+### **Long-term Vision**
+- [ ] **Enterprise Features**: Team management, analytics dashboard
+- [ ] **API Integration**: RESTful API for third-party integrations
+- [ ] **Cloud Deployment**: SaaS offering with scalable infrastructure
+- [ ] **Voice Integration**: Voice-to-text and text-to-voice capabilities
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/niteshkrjhag/autoreplypro/issues).
+We welcome contributions from the community! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+**Quick Start for Contributors:**
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Follow coding standards in [ARCHITECTURE.md](ARCHITECTURE.md)
+4. Submit pull request with comprehensive description
 
 ## 📄 License
 
-This project is [MIT](LICENSE) licensed.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Nitesh Kumar Jha**
+- Software Engineer passionate about AI automation and user experience
+- Demonstrates expertise in Python, AI integration, and system architecture
+- Committed to building production-ready software with clean, maintainable code
 
 ---
-*Last updated: 2025-07-09 13:22:35 UTC by @Niteshkrjhag*
+
+*For technical interviews and system design discussions, see [INTERVIEW_NOTES.md](INTERVIEW_NOTES.md) and [SYSTEM_DESIGN_QA.md](SYSTEM_DESIGN_QA.md)*
